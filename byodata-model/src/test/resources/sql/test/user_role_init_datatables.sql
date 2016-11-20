@@ -1,5 +1,5 @@
 -- -----------------------------------------------------
--- Table bglogin.user
+-- Table byodata.user
 -- -----------------------------------------------------
 CREATE TABLE user (
   user_id INTEGER NOT NULL,
@@ -12,7 +12,7 @@ CREATE TABLE user (
 
 
 -- -----------------------------------------------------
--- Table bglogin.role
+-- Table byodata.role
 -- -----------------------------------------------------
 CREATE TABLE role (
   role_id INTEGER NOT NULL,
@@ -21,7 +21,7 @@ CREATE TABLE role (
 
 
 -- -----------------------------------------------------
--- Table bglogin.user_roles
+-- Table byodata.user_roles
 -- -----------------------------------------------------
 CREATE TABLE user_roles (
   user_roles_id INTEGER NOT NULL,

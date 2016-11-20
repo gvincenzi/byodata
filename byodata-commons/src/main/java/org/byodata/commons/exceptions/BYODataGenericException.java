@@ -14,13 +14,13 @@ public class BYODataGenericException extends Exception {
 	private static final long serialVersionUID = 6943842923233038803L;
 	
 	/**
-	 * BGLoginErrorEnum
+	 * BYODataErrorEnum
 	 */
 	private BYODataErrorEnum error;
 	
 	/**
 	 * Constructor
-	 * @param error BGLoginErrorEnum
+	 * @param error BYODataErrorEnum
 	 */
 	public BYODataGenericException(BYODataErrorEnum error) {
 		super(error.name());
@@ -29,7 +29,7 @@ public class BYODataGenericException extends Exception {
 	
 	/**
 	 * Constructor
-	 * @param error BGLoginErrorEnum
+	 * @param error BYODataErrorEnum
 	 * @param messageToLog String
 	 */
 	public BYODataGenericException(BYODataErrorEnum error, String messageToLog) {
