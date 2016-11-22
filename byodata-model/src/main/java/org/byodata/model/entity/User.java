@@ -4,6 +4,10 @@ import java.util.Calendar;
 import java.util.HashSet;
 import java.util.Set;
 
+import org.byodata.commons.api.View;
+
+import com.fasterxml.jackson.annotation.JsonView;
+
 /**
  * Entity bean User for table user
  * @author Giuseppe Vincenzi
@@ -13,11 +17,13 @@ public class User {
 	/**
 	 * Column user_id
 	 */
+	@JsonView(View.User.class)
 	private int userId;
 	
 	/**
 	 * Column username
 	 */
+	@JsonView(View.User.class)
 	private String username;
 	
 	/**
@@ -38,6 +44,7 @@ public class User {
 	/**
 	 * Mapped by join table user_roles
 	 */
+	@JsonView(View.UserWithRoles.class)
 	private Set<Role> roles;
 
 	/**

@@ -1,5 +1,9 @@
 package org.byodata.model.entity;
 
+import org.byodata.commons.api.View;
+
+import com.fasterxml.jackson.annotation.JsonView;
+
 /**
  * Entity bean Role for table role
  * @author Giuseppe Vincenzi
@@ -9,11 +13,13 @@ public class Role {
 	/**
 	 * Column role_id
 	 */
+	@JsonView(View.UserWithRoles.class)
 	private int roleId;
 	
 	/**
 	 * Column role
 	 */
+	@JsonView(View.UserWithRoles.class)
 	private String role;
 
 	/**
