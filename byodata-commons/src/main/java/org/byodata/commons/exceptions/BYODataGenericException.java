@@ -1,6 +1,9 @@
 package org.byodata.commons.exceptions;
 
+import org.byodata.commons.api.View;
 import org.byodata.commons.enums.BYODataErrorEnum;
+
+import com.fasterxml.jackson.annotation.JsonView;
 
 /**
  * Generic exception class
@@ -49,5 +52,20 @@ public class BYODataGenericException extends Exception {
 	 */
 	public void setError(BYODataErrorEnum error) {
 		this.error = error;
+	}
+	
+	@JsonView(View.BYODataException.class)
+	public String getKey(){
+		return this.error.getKey();
+	}
+	
+	@JsonView(View.BYODataException.class)
+	public int getCodeError(){
+		return this.error.getCodeError();
+	}
+	
+	@JsonView(View.BYODataException.class)
+	public String getMessage(){
+		return super.getMessage();
 	}
 }

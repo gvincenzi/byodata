@@ -8,4 +8,5 @@ package org.byodata.commons.api;
 public class View {
 	public interface User {}
 	public interface UserWithRoles extends User {}
+	public interface BYODataException {}
 }

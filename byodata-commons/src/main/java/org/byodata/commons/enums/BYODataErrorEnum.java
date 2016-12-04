@@ -6,20 +6,28 @@ package org.byodata.commons.enums;
  *
  */
 public enum BYODataErrorEnum {
-	LOGIN_ERROR("login.error"),
-	LOGIN_PERMISSION_ERROR("login.permission.error");
+	INPUT_GET_USER_PARAMETER_ERROR(4001, "input.get.user.parameter.error"),
+	INPUT_GET_USER_NOT_EXISTS_ERROR(4002, "input.get.user.not.exists.error"),
+	LOGIN_PERMISSION_ERROR(4011,"login.permission.error"),
+	LOGIN_ERROR(4012,"login.error");
 	
 	/**
 	 * Key message used by Spring MVC
 	 */
-	private String key;
+	private final String key;
+	
+	/**
+	 * Error code
+	 */
+	private final int codeError;
 	
 	/**
 	 * Constructor
 	 * @param key String
 	 */
-	private BYODataErrorEnum(String key) {
-		this.setKey(key);
+	private BYODataErrorEnum(int value, String key) {
+		this.key = key;
+		this.codeError = value;
 	}
 
 	/**
@@ -30,10 +38,10 @@ public enum BYODataErrorEnum {
 	}
 
 	/**
-	 * @param key the key to set
+	 * @return the value
 	 */
-	public void setKey(String key) {
-		this.key = key;
+	public int getCodeError() {
+		return codeError;
 	}
 	
 }
