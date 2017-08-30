@@ -1,2 +1,2 @@
 # byodata
-BeYourOpenData
+BeYourOpenData (built using Travis CI)
